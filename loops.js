@@ -49,7 +49,7 @@ while (i <= 5) {
 // while and for loops: first check condition then run the loop
 // do-while loop: first run the loop then check condition
 
-// loop will run at least once even if the condition is wrong
+// do-while loop will run atleast once even if the condition is wrong
 let j = 6;
 
 do {
