@@ -69,9 +69,9 @@ console.log(user.hasOwnProperty('degree'));
 console.log(user.hasOwnProperty('email'));
 
 // ?. => optional chaining operator
-// used to check whether an object has a specifc key or not
-// returns the value if the key is present
-// returns undefined if the key is not present
+// used to check whether an object has a specific property or not
+// returns the value if the property is present
+// returns undefined if the property is not present
 
 console.log(user?.firstName);
 console.log(user?.age);
@@ -91,3 +91,58 @@ for (let key in user) {
 for (let [key, value] of Object.entries(user)) {
   console.log(`${key}: ${value}`);
 }
+
+// practice question
+const appleProducts = [
+  {
+    productName: 'iPhone 10',
+    price: '$10000',
+    launchDate: '25/09/2017',
+
+    buyProduct: function (product) {
+      if (product.toLowerCase() === this.productName.toLowerCase()) {
+        console.log(
+          `Congratulations, you have just bought ${this.productName}`
+        );
+      } else {
+        console.log(`Sorry, this product is not available`);
+      }
+    },
+  },
+
+  {
+    productName: 'Macbook Air',
+    price: '$15000',
+    launchDate: '30/10/2021',
+
+    buyProduct: function (product) {
+      if (product.toLowerCase() === this.productName.toLowerCase()) {
+        console.log(
+          `Congratulations, you have just bought ${this.productName}`
+        );
+      } else {
+        console.log(`Sorry, this product is not available`);
+      }
+    },
+  },
+
+  {
+    productName: 'iMac',
+    price: '$1000',
+    launchDate: '20/12/2022',
+
+    buyProduct: function (product) {
+      if (product.toLowerCase() === this.productName.toLowerCase()) {
+        console.log(
+          `Congratulations, you have just bought ${this.productName}`
+        );
+      } else {
+        console.log(`Sorry, this product is not available`);
+      }
+    },
+  },
+];
+
+appleProducts[0].buyProduct('iPHone 10');
+appleProducts[1].buyProduct('MACBOOK air');
+appleProducts[2].buyProduct('MACBOOK air');
