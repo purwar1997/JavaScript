@@ -20,7 +20,7 @@ console.log(arr2);
 // array methods
 
 // push()
-// to add elements
+// used to add an element at the end of an array
 arr.push('Aman');
 console.log(arr);
 
@@ -180,3 +180,30 @@ console.log(lang.split(''));
 
 let numSum = '1+ 2+ 3+ 4+ 5+ 6+ 10+ 0';
 console.log(numSum.split('+ '));
+
+// program to fetch string values from the array
+let array = [5, true, 'Hitesh', 6, 'Shubham', false, 'Anurag'];
+let str = [];
+
+for (let value of array) {
+  if (typeof value === 'string') {
+    str.push(value);
+  }
+}
+
+console.log(str);
+
+// using forEach() method
+let str2 = [];
+
+array.forEach(value => {
+  if (typeof value === 'string') {
+    str2.push(value);
+  }
+});
+
+console.log(str2);
+
+// using filter() method
+let str3 = array.filter(value => typeof value === 'string');
+console.log(str3);
