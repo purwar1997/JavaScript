@@ -74,7 +74,7 @@ console.log(country.filter(country => country.length == 6));
 // reduce()
 // Syntax: array.reduce(function(accumulator, value, index, array) {  ...code...  }, initial_acc_value)
 // Syntax: array.reduce(callback, initial_acc_value)
-// returns a single value i.e. last accumulator value
+// returns a single value i.e. final accumulator value
 // value returned by the callback function will be the next accumulator value
 // accumulator value will get updated on each iteration
 
