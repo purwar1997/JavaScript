@@ -48,6 +48,8 @@ for (let value of set) {
   console.log(value);
 }
 
+// Syntax: set.forEach(function(value, key, set) {  ...code...  })
+// in a set, keys and values are same
 set.forEach(value => console.log(value));
 
 // converting set into an array with the same values
@@ -71,7 +73,7 @@ console.log(map.size);
 
 // set() is used to add properties
 // Syntax: map.set(key, value)
-// set() returns an updated map, hence set methods can be chained
+// set() returns an updated map, hence set() methods can be chained
 
 map.set('name', 'Jonathan');
 console.log(map);
@@ -93,7 +95,7 @@ console.log(map.get('city'));
 console.log(map.get('parents'));
 console.log(map.get('college')); // undefinded
 
-// delete() is used to delete a certain property of map
+// delete() is used to delete a specific property of map
 // Syntax: map.delete(key)
 map.delete('hasAJob');
 console.log(map);
@@ -114,7 +116,7 @@ map
   .set('parents', { mother: 'Martha', father: 'Jordan' });
 
 // has()
-// to check whether map contains a certain property or not
+// to check whether map contains a specific property or not
 // Syntax: map.has(key)
 console.log(map.has('age')); // true
 console.log(map.has('city')); // true
@@ -141,7 +143,7 @@ for (let [key, value] of map) {
   console.log(key, value);
 }
 
-// => is called FAT arrow
+// => is called a FAT arrow
 
 // spread operator on map
 let map2 = new Map();
