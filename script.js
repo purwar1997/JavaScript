@@ -8,9 +8,23 @@ function fullName() {
   console.log(`${firstName} ${lastName}`);
 
   function message() {
-    console.log(`Hello World!`);
+    var str = `Hello World!`;
+    console.log(str);
+    console.log(this);
   }
+  console.log(this);
   message();
 }
 
+console.log(this);
 fullName();
+
+// in all three cases, 'this' keyword refers to the same global window object
+
+// Call stack is known by various names :-
+// 1. Execution Context stack
+// 2. Control stack
+// 3. Program stack
+// 4. Machine stack
+
+// Lexical scope is also known as Lexical environment
