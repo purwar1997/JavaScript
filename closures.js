@@ -1,5 +1,5 @@
 // Closure: Function bundled with its lexical scope/environment is called closure
-// due to closure, function gets the access of variables outside their local scope
+// due to closure, function gets the access of variables outside its scope
 
 function sum() {
   const num1 = 34;
@@ -17,6 +17,8 @@ sum2(10);
 const num = 100;
 
 function addition(num1, num2) {
+  // when this function is returned, its closure will return along wth it
+  // its closure will contain reference of the outer scope variables like num1 and num2
   return function (num3) {
     console.log(num + num1 + num2 + num3);
   };
