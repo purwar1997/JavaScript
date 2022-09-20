@@ -94,6 +94,7 @@ class User {
 // 2. sets the value of 'this' keyword inside class to that empty object
 // 3. calls constructor function to create an object
 
+// creating instances of User class
 const user1 = new User('Shubham', 24, 'purwar98@ai.com');
 const user2 = new User('Kapil', 22, 'kapil@gmail.com');
 const user3 = new User('Hritik', 40, 'roshan20@gmail.com');
@@ -124,7 +125,7 @@ console.log(user2.signup().login());
 // Admin class will inherit all the properties and methods of User class
 class Admin extends User {
   constructor(name, age, email, role, company) {
-    // super is used to call constructor function of super class i.e. User
+    // super is used to call constructor function of super/parent class i.e. User
     super(name, age, email);
     this.role = role;
     this.company = company;
@@ -198,3 +199,9 @@ const superAdmin = new Superadmin(
 
 console.log(superAdmin.changeAdminRole(admin1, 'CTO'));
 console.log(superAdmin.changeAdminRole(admin2, 'Senior Developer'));
+
+// objects will be instances of their parent classes
+console.log(admin1 instanceof User);
+console.log(admin2 instanceof User);
+console.log(superAdmin instanceof Admin);
+console.log(superAdmin instanceof User);

@@ -78,3 +78,30 @@ user2.setAge = 28;
 user3.setAge = 24;
 
 console.table(user1);
+
+// another example
+class Userone {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.score = 0;
+  }
+
+  getFullName() {
+    const fullName = `${this.firstName} ${this.lastName}`;
+    return fullName;
+  }
+}
+
+class Usertwo extends Userone {
+  constructor(firstName, lastName) {
+    super(firstName, lastName); // calls parent class constructor
+  }
+
+  getFullName() {
+    const fullName = `${this.firstName} ${this.lastName}`;
+    return fullName;
+  }
+}
+
+const user = new Usertwo('Shubham', 'Purwar');
