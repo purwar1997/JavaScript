@@ -18,20 +18,21 @@ function userInfo(age, college) {
 // call() and apply() will directly invoke the function
 
 // call() method
-// Syntax: function.call(object, arg1, arg2, ...)
+// Syntax: function.call(this_reference, arg1, arg2, ...)
 
-// first argument must be an object
+// first argument must be a reference to 'this' variable
 console.log(userInfo.call(user1, 24, 'IIT Delhi'));
 console.log(userInfo.call(user2, 26, 'NIT Bhopal'));
 
 // apply() method
-// Syntax: function.apply(object, arrayOfValues)
+// Syntax: function.apply(this_reference, arrayOfValues)
 
+// first argument must be a reference to 'this' variable
 console.log(userInfo.apply(user1, [24, 'IGNOU Delhi']));
 console.log(userInfo.apply(user2, [26, 'BITS Pilani']));
 
 // bind() method
-// Syntax: function.bind(object, arg1, arg2, ...)
+// Syntax: function.bind(this_reference, arg1, arg2, ...)
 // bind() doesn't invokes function. Instead, it returns a copy of the function that can be invoked later.
 
 const student1 = {
@@ -55,7 +56,7 @@ const student3 = {
 function marks(mathsMarks, scienceMarks, englishMarks, hindiMarks) {
   this.maths = mathsMarks;
   this.science = scienceMarks;
-  this.englisg = englishMarks;
+  this.english = englishMarks;
   this.hindi = hindiMarks;
 }
 

@@ -39,8 +39,8 @@ function marks(mathsMarks, scienceMarks, englishMarks, hindiMarks) {
 // polyfill for bind()
 Function.prototype.myBind = function (object, ...args) {
   object.func = this;
-  return function (...args_) {
-    return object.func(...args, ...args_);
+  return function (...args2) {
+    return object.func(...args, ...args2);
   };
 };
 
@@ -52,8 +52,8 @@ console.table(student);
 // polyfill for bind() using call() method
 Function.prototype.myBind = function (object, ...args) {
   const func = this;
-  return function (...args_) {
-    return func.call(object, ...args, ...args_);
+  return function (...args2) {
+    return func.call(object, ...args, ...args2);
   };
 };
 
@@ -65,8 +65,8 @@ console.table(student);
 // polyfill for bind() using apply() method
 Function.prototype.myBind = function (object, ...args) {
   const func = this;
-  return function (...args_) {
-    return func.apply(object, [...args, ...args_]);
+  return function (...args2) {
+    return func.apply(object, [...args, ...args2]);
   };
 };
 
