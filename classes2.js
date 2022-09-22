@@ -30,7 +30,7 @@ class User {
   }
 
   // setter => used to set or write values
-  // exactly one parameter is allowed inside set()
+  // exactly one parameter is allowed inside set method
   set setScore(score) {
     this.score = score;
   }

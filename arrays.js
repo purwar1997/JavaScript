@@ -207,3 +207,20 @@ console.log(str2);
 // using filter() method
 let str3 = array.filter(value => typeof value === 'string');
 console.log(str3);
+
+// fill() method
+// Syntax: array.fill(fillValue, startIndex, endIndex)
+let arrNum = [12, 89, 90, 11, 45, 9];
+arrNum.fill('zoom', 2, 4);
+
+console.log(arrNum);
+
+// flat() method
+// used to remove nestings inside an array
+// Syntax: array.flat(number)
+
+let nestedArr = [1, [2, 3], 4, [5, [6, [7, [8, [9, [10]]]]]]];
+console.log(nestedArr.flat(Infinity)); // removes all nestings
+
+// Array.isArray() is used to check whether an object is an array or not
+// console.log(Array.isArray(arrNum));

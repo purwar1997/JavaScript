@@ -20,6 +20,37 @@ let fullStack = [
 let [frontend, backend] = fullStack;
 console.log(frontend, backend);
 
+// setting default values
+let [p = 1, q = 0, r = 0] = [12];
+console.log(p, q, r);
+
+// nested array
+let [x1, [x2, x3], [x4, x5]] = [1, [2, 3], [4, 5]];
+console.log(x1, x2, x3, x4, x5);
+
+// destructring of objects
+let user = {
+  name: 'Shubham',
+  age: 24,
+  course: 'BCA',
+  year: 2021,
+  parents: { mother: 'Sangeeta' },
+};
+
+// variable name and property name should be same
+let { name, age, course } = user;
+console.log(name, course);
+
+({ name: userName, age: userAge, course: degree } = user);
+console.log(userName, userAge, degree);
+
+// setting default values
+({ college = 'IIT Delhi', year: passingYear = '2022' } = user);
+console.log(college, passingYear);
+
+({ parents: { mother: mom = '', father: dad = '' } = '' } = user);
+console.log(mom, dad);
+
 // ... => rest operator
 // packs all the remaining values inside an array
 let [num1, , num2, , , ...rest] = [2, 6, 9, 7, 67, 12, 90, 67];
