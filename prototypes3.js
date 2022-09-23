@@ -52,7 +52,7 @@ console.log(Usertwo.hasOwnProperty('getCourseCount'));
 console.log(Userone.hasOwnProperty('getName'));
 console.log(Usertwo.hasOwnProperty('setEmail'));
 
-// since arrays are also objects, this hasOwnProperty() also works on it
+// since arrays are also objects, hasOwnProperty() also works on them
 const arr = new Array(1, 99, 100, 20);
 console.log(arr.hasOwnProperty(0));
 console.log(arr.hasOwnProperty('length'));
